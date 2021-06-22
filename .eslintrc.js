@@ -28,6 +28,7 @@ module.exports = {
 			'error',
 			'always'
 		],
+		'comma-dangle': ['error', 'never'],
 		'prefer-template': 'error',
 		'space-infix-ops': 'error',
 		'object-curly-spacing': ['error', 'always'],

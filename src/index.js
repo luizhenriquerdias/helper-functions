@@ -31,6 +31,17 @@ const buildQueryParams = (prefix, query = {}) => {
 	return url;
 };
 
+const clearAxiosResponseData = response => {
+	const { data } = (response || {});
+	if (typeof data === 'object' && !Array.isArray(data))
+		return clearAxiosResponseData(response.data);
+	return response;
+};
+
+const normalizeString = string => (string || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
 module.exports = {
-	buildQueryParams
+	normalizeString,
+	buildQueryParams,
+	clearAxiosResponseData
 };

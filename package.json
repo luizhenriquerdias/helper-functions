@@ -1,24 +1,27 @@
 {
-  "name": "helper-functions",
-  "version": "1.0.0",
-  "description": "Some helper functions",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luizhenriquerdias/helper-functions.git"
-  },
-  "author": "Luiz Henrique Dias",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/luizhenriquerdias/helper-functions/issues"
-  },
-  "homepage": "https://github.com/luizhenriquerdias/helper-functions#readme",
-  "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-plugin-jest": "^24.3.6",
-    "jest": "^27.0.5"
-  }
+	"name": "luiz-fns",
+	"version": "1.0.0",
+	"description": "Some helper functions",
+	"author": "Luiz Henrique Dias <luizhenriquerdias@gmail.com>",
+	"main": "src/index.js",
+	"files": [
+		"/src"
+	],
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/luizhenriquerdias/helper-functions.git"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/luizhenriquerdias/helper-functions/issues"
+	},
+	"homepage": "https://github.com/luizhenriquerdias/helper-functions#readme",
+	"devDependencies": {
+		"eslint": "^7.29.0",
+		"eslint-plugin-jest": "^24.3.6",
+		"jest": "^27.0.5"
+	}
 }

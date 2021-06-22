@@ -1,8 +1,8 @@
-const { buildQueryParams } = require('./index');
+const {	buildQueryParams } = require('../src/index');
 
 const prefix = 'localhost';
 
-test('buildQueryParams with different types', () => {
+test('buildQueryParams params', () => {
 	expect(buildQueryParams(prefix)).toBe(prefix);
 	expect(buildQueryParams(prefix, {})).toBe(prefix);
 	expect(buildQueryParams(prefix, '1')).toBe(prefix);
