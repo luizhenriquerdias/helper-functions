@@ -40,7 +40,25 @@ const clearAxiosResponseData = response => {
 
 const normalizeString = string => (string || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
+const mapFields = options => {
+	const object = {};
+	for (let x = 0; x < options.fields.length; x++) {
+		const field = [options.fields[x]];
+		object[field] = {
+			get() {
+				return this.$store.state[options.base][field];
+			},
+			set(value) {
+				this.$store.commit(options.mutation, { [field]: value });
+			}
+		};
+	}
+	return object;
+};
+
+
 module.exports = {
+	mapFields,
 	normalizeString,
 	buildQueryParams,
 	clearAxiosResponseData
