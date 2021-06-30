@@ -1,6 +1,6 @@
 {
 	"name": "luiz-fns",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Some helper functions",
 	"author": "Luiz Henrique Dias <luizhenriquerdias@gmail.com>",
 	"main": "src/index.js",

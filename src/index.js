@@ -32,9 +32,11 @@ const buildQueryParams = (prefix, query = {}) => {
 };
 
 const clearAxiosResponseData = response => {
-	const { data } = response;
+	const { status, data } = (response || {});
+	if (status === 204)
+		return true;
 	if (typeof data === 'object')
-		return clearAxiosResponseData(response.data);
+		return clearAxiosResponseData(data);
 	return response;
 };
 
