@@ -1,6 +1,6 @@
 {
 	"name": "luiz-fns",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"description": "Some helper functions",
 	"author": "Luiz Henrique Dias <luizhenriquerdias@gmail.com>",
 	"main": "src/index.js",
@@ -21,7 +21,7 @@
 	},
 	"homepage": "https://github.com/luizhenriquerdias/luiz-fns#readme",
 	"devDependencies": {
-		"eslint": "^7.29.0",
+		"eslint": "^7.30.0",
 		"eslint-plugin-jest": "^24.3.6",
 		"jest": "^27.0.6"
 	}
