@@ -125,8 +125,11 @@ const getEslintRules = () => ({
 	'vue/no-v-html': 0
 });
 
+const toMoney = number => number.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+
 
 module.exports = {
+	toMoney,
 	mapFields,
 	getEslintRules,
 	normalizeString,
