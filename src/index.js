@@ -127,11 +127,23 @@ const getEslintRules = () => ({
 
 const toMoney = number => number.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 
+const formatCellphone = cellphone => {
+	if (!cellphone || cellphone.length < 10)
+		return cellphone;
+
+	const tam = cellphone.length % 2;
+	const dd = cellphone.substr(0, 2);
+	const pri = cellphone.substr(2, 4 + tam);
+	const seg = cellphone.substr(6 + tam, 4);
+	return `(${dd}) ${pri}-${seg}`;
+};
+
 
 module.exports = {
 	toMoney,
 	mapFields,
 	getEslintRules,
+	formatCellphone,
 	normalizeString,
 	buildQueryParams,
 	clearAxiosResponseData
