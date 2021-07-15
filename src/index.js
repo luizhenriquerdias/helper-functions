@@ -138,6 +138,19 @@ const formatCellphone = cellphone => {
 	return `(${dd}) ${pri}-${seg}`;
 };
 
+const openPdfFromBufferArray = bufferArray => {
+	const arr = new Uint8Array(bufferArray);
+	const blob = new Blob([arr], { type: 'application/pdf' });
+	const url = window.URL.createObjectURL(blob);
+	const link = document.createElement('a');
+	link.setAttribute('href', url);
+	link.setAttribute('target', '_blank');
+	link.style.visibility = 'hidden';
+	document.body.appendChild(link);
+	link.click();
+	document.body.removeChild(link);
+};
+
 
 module.exports = {
 	toMoney,
@@ -146,5 +159,6 @@ module.exports = {
 	formatCellphone,
 	normalizeString,
 	buildQueryParams,
-	clearAxiosResponseData
+	clearAxiosResponseData,
+	openPdfFromBufferArray
 };
