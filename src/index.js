@@ -151,6 +151,13 @@ const openPdfFromBufferArray = bufferArray => {
 	document.body.removeChild(link);
 };
 
+const copyToClipboard = text => new Promise((resolve, reject) => {
+	if (navigator.clipboard) {
+		navigator.clipboard.writeText(text);
+		resolve();
+	} else
+		reject();
+});
 
 module.exports = {
 	toMoney,
@@ -158,6 +165,7 @@ module.exports = {
 	getEslintRules,
 	formatCellphone,
 	normalizeString,
+	copyToClipboard,
 	buildQueryParams,
 	clearAxiosResponseData,
 	openPdfFromBufferArray
